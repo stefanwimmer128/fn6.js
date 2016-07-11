@@ -1,4 +1,4 @@
-# fn6.js 1.1.0 Documentation
+# fn6.js 2.0.0 Documentation
 
 <a name="fn6"></a>
 
@@ -9,6 +9,11 @@ fn6.js Namespace
 **Author:** Stefan Wimmer <stefanwimmer128@gmail.com>  
 
 * [fn6](#fn6)
+    * [.Array](#fn6.Array) ⇐ <code>Array</code>
+        * [new fn6.Array(...args)](#new_fn6.Array_new)
+        * [.pluck(key)](#fn6.Array+pluck) ⇒ <code>Array</code>
+        * [.peek()](#fn6.Array+peek) ⇒ <code>\*</code>
+        * [.sum()](#fn6.Array+sum) ⇒ <code>Number</code>
     * [.curry(fn)](#fn6.curry) ⇒ <code>function</code>
     * [.uncurry(curried)](#fn6.uncurry) ⇒ <code>function</code>
     * [.bind(fn, [args], [thisArg])](#fn6.bind) ⇒ <code>function</code>
@@ -27,7 +32,58 @@ fn6.js Namespace
     * [.some(fn)](#fn6.some) ⇒ <code>function</code>
     * [.sum(arr)](#fn6.sum) ⇒ <code>Number</code>
     * [.version()](#fn6.version) ⇒ <code>String</code>
+    * [.array(arr)](#fn6.array) ⇒ <code>[Array](#fn6.Array)</code>
 
+<a name="fn6.Array"></a>
+
+### fn6.Array ⇐ <code>Array</code>
+fn6.Array is an extended form of the global Array object
+
+**Kind**: static class of <code>[fn6](#fn6)</code>  
+**Extends:** <code>Array</code>  
+
+* [.Array](#fn6.Array) ⇐ <code>Array</code>
+    * [new fn6.Array(...args)](#new_fn6.Array_new)
+    * [.pluck(key)](#fn6.Array+pluck) ⇒ <code>Array</code>
+    * [.peek()](#fn6.Array+peek) ⇒ <code>\*</code>
+    * [.sum()](#fn6.Array+sum) ⇒ <code>Number</code>
+
+<a name="new_fn6.Array_new"></a>
+
+#### new fn6.Array(...args)
+Initialize fn6.js Array
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ...args | <code>\*</code> | Values to initialize the Array with |
+
+<a name="fn6.Array+pluck"></a>
+
+#### array.pluck(key) ⇒ <code>Array</code>
+See fn6.pluck() using "this" as Array
+
+**Kind**: instance method of <code>[Array](#fn6.Array)</code>  
+**Returns**: <code>Array</code> - Return value from fn6.pluck()  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| key | <code>String</code> | Key to parse to fn6.pluck() |
+
+<a name="fn6.Array+peek"></a>
+
+#### array.peek() ⇒ <code>\*</code>
+See fn6.peek() using "this" as Array
+
+**Kind**: instance method of <code>[Array](#fn6.Array)</code>  
+**Returns**: <code>\*</code> - Return value from fn6.peek()  
+<a name="fn6.Array+sum"></a>
+
+#### array.sum() ⇒ <code>Number</code>
+See fn6.sum() using "this" as Array
+
+**Kind**: instance method of <code>[Array](#fn6.Array)</code>  
+**Returns**: <code>Number</code> - Return value from fn6.sum()  
 <a name="fn6.curry"></a>
 
 ### fn6.curry(fn) ⇒ <code>function</code>
@@ -242,3 +298,15 @@ function.js version
 
 **Kind**: static method of <code>[fn6](#fn6)</code>  
 **Returns**: <code>String</code> - function.js version  
+<a name="fn6.array"></a>
+
+### fn6.array(arr) ⇒ <code>[Array](#fn6.Array)</code>
+Initialize fn6.Array from array
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>[Array](#fn6.Array)</code> - Initialized fn6.Array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | Array to initialize with |
+

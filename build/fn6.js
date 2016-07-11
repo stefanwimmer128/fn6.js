@@ -197,12 +197,64 @@ fn6.sum = arr =>
  */
 fn6.version = () => require("../package.json").version;
 
+/**
+ * fn6.Array is an extended form of the global Array object
+ * @extends Array
+ */
+fn6.Array = class extends Array
+{
+    /**
+     * Initialize fn6.js Array
+     * @param args {...*} Values to initialize the Array with
+     */
+    constructor(...args)
+    {
+        super(...args);
+    }
+    
+    /**
+     * See fn6.pluck() using "this" as Array
+     * @param key {String} Key to parse to fn6.pluck()
+     * @returns {Array} Return value from fn6.pluck()
+     */
+    pluck(key)
+    {
+        return fn6.pluck(this, key);
+    }
+    
+    /**
+     * See fn6.peek() using "this" as Array
+     * @returns {*} Return value from fn6.peek()
+     */
+    peek()
+    {
+        return fn6.peek(this);
+    }
+    
+    /**
+     * See fn6.sum() using "this" as Array
+     * @returns {Number} Return value from fn6.sum()
+     */
+    sum()
+    {
+        return fn6.sum(this);
+    }
+};
+
+/**
+ * Initialize fn6.Array from array
+ * @param arr {Array} Array to initialize with
+ * @return {fn6.Array} Initialized fn6.Array
+ */
+fn6.array = (arr) =>
+    new fn6.Array(...arr);
+
 module.exports = fn6;
 
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {
