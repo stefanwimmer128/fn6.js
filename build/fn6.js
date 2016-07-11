@@ -145,6 +145,18 @@ fn6.pluck = (arr, key) =>
 };
 
 /**
+ * Combination of Array.prototype.pop and Array.prototype.push
+ * @param arr Array to be called on
+ * @returns {*} Last element from array (like pop()) without removing (through push())
+ */
+fn6.peek = (arr) =>
+{
+    const x = arr.pop();
+    arr.push(x);
+    return x;
+};
+
+/**
  * Curried Array.prototype.forEach function
  * @param fn {function} Callback function
  * @return {function} Function that takes the Array to forEach
@@ -190,7 +202,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

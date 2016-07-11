@@ -1,4 +1,4 @@
-# fn6.js 1.0.0 Documentation
+# fn6.js 1.1.0 Documentation
 
 <a name="fn6"></a>
 
@@ -21,6 +21,7 @@ fn6.js Namespace
     * [.reject(fn)](#fn6.reject) ⇒ <code>function</code>
     * [.reduce(fn)](#fn6.reduce) ⇒ <code>function</code>
     * [.pluck(arr, [key])](#fn6.pluck) ⇒ <code>Array</code> &#124; <code>function</code>
+    * [.peek(arr)](#fn6.peek) ⇒ <code>\*</code>
     * [.each(fn)](#fn6.each) ⇒ <code>function</code>
     * [.every(fn)](#fn6.every) ⇒ <code>function</code>
     * [.some(fn)](#fn6.some) ⇒ <code>function</code>
@@ -173,6 +174,18 @@ pluck extracts a specific "key" from all objects within the array.
 | --- | --- | --- |
 | arr |  | Array to pluck |
 | [key] | <code>String</code> | Key for extraction |
+
+<a name="fn6.peek"></a>
+
+### fn6.peek(arr) ⇒ <code>\*</code>
+Combination of Array.prototype.pop and Array.prototype.push
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>\*</code> - Last element from array (like pop()) without removing (through push())  
+
+| Param | Description |
+| --- | --- |
+| arr | Array to be called on |
 
 <a name="fn6.each"></a>
 
