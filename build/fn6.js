@@ -214,7 +214,7 @@ fn6.Array = class extends Array
     
     /**
      * See fn6.pluck() using "this" as Array
-     * @param key {String} Key to parse to fn6.pluck()
+     * @param key {String} Key to pass to fn6.pluck()
      * @returns {Array} Return value from fn6.pluck()
      */
     pluck(key)
@@ -238,6 +238,15 @@ fn6.Array = class extends Array
     sum()
     {
         return fn6.sum(this);
+    }
+
+    /**
+     * See fn6.array2object() using "this" as Array
+     * @returns {Object} Return value from fn6.array2object()
+     */
+    toObject()
+    {
+        return fn6.array2object(this);
     }
 };
 
@@ -274,7 +283,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

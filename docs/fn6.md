@@ -1,4 +1,4 @@
-# fn6.js 2.1.0 Documentation
+# fn6.js 2.2.0 Documentation
 
 <a name="fn6"></a>
 
@@ -14,6 +14,7 @@ fn6.js Namespace
         * [.pluck(key)](#fn6.Array+pluck) ⇒ <code>Array</code>
         * [.peek()](#fn6.Array+peek) ⇒ <code>\*</code>
         * [.sum()](#fn6.Array+sum) ⇒ <code>Number</code>
+        * [.toObject()](#fn6.Array+toObject) ⇒ <code>Object</code>
     * [.curry(fn)](#fn6.curry) ⇒ <code>function</code>
     * [.uncurry(curried)](#fn6.uncurry) ⇒ <code>function</code>
     * [.bind(fn, [args], [thisArg])](#fn6.bind) ⇒ <code>function</code>
@@ -49,6 +50,7 @@ fn6.Array is an extended form of the global Array object
     * [.pluck(key)](#fn6.Array+pluck) ⇒ <code>Array</code>
     * [.peek()](#fn6.Array+peek) ⇒ <code>\*</code>
     * [.sum()](#fn6.Array+sum) ⇒ <code>Number</code>
+    * [.toObject()](#fn6.Array+toObject) ⇒ <code>Object</code>
 
 <a name="new_fn6.Array_new"></a>
 
@@ -70,7 +72,7 @@ See fn6.pluck() using "this" as Array
 
 | Param | Type | Description |
 | --- | --- | --- |
-| key | <code>String</code> | Key to parse to fn6.pluck() |
+| key | <code>String</code> | Key to pass to fn6.pluck() |
 
 <a name="fn6.Array+peek"></a>
 
@@ -86,6 +88,13 @@ See fn6.sum() using "this" as Array
 
 **Kind**: instance method of <code>[Array](#fn6.Array)</code>  
 **Returns**: <code>Number</code> - Return value from fn6.sum()  
+<a name="fn6.Array+toObject"></a>
+
+#### array.toObject() ⇒ <code>Object</code>
+See fn6.array2object() using "this" as Array
+
+**Kind**: instance method of <code>[Array](#fn6.Array)</code>  
+**Returns**: <code>Object</code> - Return value from fn6.array2object()  
 <a name="fn6.curry"></a>
 
 ### fn6.curry(fn) ⇒ <code>function</code>
