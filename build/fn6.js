@@ -249,12 +249,32 @@ fn6.Array = class extends Array
 fn6.array = (arr) =>
     new fn6.Array(...arr);
 
+/**
+ * Creates Array from Object
+ * 
+ * <code>{ name: "Stefan Wimmer", age: 18 } -> [ [ "name", "Stefan Wimmer" ], [ "age", 18 ] ]</code>
+ * @param obj {Object} Object to convert
+ * @return {Array} Converted Array
+ */
+fn6.object2array = (obj) =>
+    Object.keys(obj).map(key => [ key, obj[key] ]);
+
+/**
+ * Crates Object from Array
+ * 
+ * <code>[ [ "name", "Stefan Wimmer" ], [ "age", 18 ] ] -> { name: "Stefan Wimmer", age: 18 }</code>
+ * @param arr {Array} Array to convert
+ * @return {Object} Converted Object
+ */
+fn6.array2object = (arr) =>
+    arr.reduce((obj, x) => (obj[x[0]] = x[1], obj), {});
+
 module.exports = fn6;
 
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

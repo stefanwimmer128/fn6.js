@@ -1,4 +1,4 @@
-# fn6.js 2.0.0 Documentation
+# fn6.js 2.1.0 Documentation
 
 <a name="fn6"></a>
 
@@ -33,6 +33,8 @@ fn6.js Namespace
     * [.sum(arr)](#fn6.sum) ⇒ <code>Number</code>
     * [.version()](#fn6.version) ⇒ <code>String</code>
     * [.array(arr)](#fn6.array) ⇒ <code>[Array](#fn6.Array)</code>
+    * [.object2array(obj)](#fn6.object2array) ⇒ <code>Array</code>
+    * [.array2object(arr)](#fn6.array2object) ⇒ <code>Object</code>
 
 <a name="fn6.Array"></a>
 
@@ -309,4 +311,32 @@ Initialize fn6.Array from array
 | Param | Type | Description |
 | --- | --- | --- |
 | arr | <code>Array</code> | Array to initialize with |
+
+<a name="fn6.object2array"></a>
+
+### fn6.object2array(obj) ⇒ <code>Array</code>
+Creates Array from Object
+
+<code>{ name: "Stefan Wimmer", age: 18 } -> [ [ "name", "Stefan Wimmer" ], [ "age", 18 ] ]</code>
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>Array</code> - Converted Array  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | Object to convert |
+
+<a name="fn6.array2object"></a>
+
+### fn6.array2object(arr) ⇒ <code>Object</code>
+Crates Object from Array
+
+<code>[ [ "name", "Stefan Wimmer" ], [ "age", 18 ] ] -> { name: "Stefan Wimmer", age: 18 }</code>
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>Object</code> - Converted Object  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | Array to convert |
 
