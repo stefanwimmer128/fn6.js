@@ -1,14 +1,14 @@
 /**
- * fn6.js 3.0.0-rc.1
+ * fn6.js 3.0.0-rc.2
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-((module, fn6) =>
+(fn6 =>
 {
-    if (module !== undefined)
-        module.exports = fn6;
+    if (typeof module === "object")
+        module.exports = fn6();
     else
-        this.fn6 = fn6;
-})(module, () =>
+        this.fn6 = fn6();
+})(() =>
 {
     /**
      * Created by Stefan Wimmer <stefanwimmer128@gmail.com> on 11.07.16.
@@ -299,7 +299,7 @@
      * @return {String} function.js version
      */
     fn6.version = () =>
-        "3.0.0-rc.1";
+        "3.0.0-rc.2";
     
     return fn6;
 });

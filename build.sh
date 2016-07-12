@@ -21,13 +21,13 @@ echo "/**
  * fn6.js ${version}
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
-((module, fn6) =>
+(fn6 =>
 {
-    if (module !== undefined)
-        module.exports = fn6;
+    if (typeof module === \"object\")
+        module.exports = fn6();
     else
-        this.fn6 = fn6;
-})(module, () =>
+        this.fn6 = fn6();
+})(() =>
 {" > build/fn6.js
 while IFS="" read line
 do
