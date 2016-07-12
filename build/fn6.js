@@ -278,7 +278,7 @@ fn6.extend = obj =>
     );
 
 /**
- * function.js version
+ * fn6.js version
  * @return {String} function.js version
  */
 fn6.version = () =>
@@ -289,7 +289,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.4.0-rc.1",
+  "version": "2.4.0-rc.2",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

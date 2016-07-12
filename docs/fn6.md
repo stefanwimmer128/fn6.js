@@ -1,4 +1,4 @@
-# fn6.js 2.4.0-rc.1 Documentation
+# fn6.js 2.4.0-rc.2 Documentation
 
 <a name="fn6"></a>
 
@@ -345,7 +345,7 @@ Crates Object from Array
 <a name="fn6.version"></a>
 
 ### fn6.version() ⇒ <code>String</code>
-function.js version
+fn6.js version
 
 **Kind**: static method of <code>[fn6](#fn6)</code>  
 **Returns**: <code>String</code> - function.js version  
