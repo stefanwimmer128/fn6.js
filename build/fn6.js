@@ -118,8 +118,7 @@ fn6.findIndex = fn =>
  * @return {function} Function that takes the Array to reject
  */
 fn6.reject = fn =>
-    arr =>
-        arr.reject(fn);
+    fn6.filter(x => ! fn(x));
 
 /**
  * Curried Array.prototype.reduce function
@@ -278,7 +277,10 @@ fn6.array2object = arr =>
  */
 fn6.extend = obj =>
     Object.keys(obj).forEach(key =>
-        fn6[key] = fn6[key] === undefined ? obj[key] : fn6[key]
+        fn6[key] = fn6[key] === undefined ? obj[key] : ((() =>
+        {
+            throw new Error("Key \"" + key + "\" already exists!");
+        })(), fn6[key])
     );
 
 /**
@@ -293,7 +295,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

@@ -1,4 +1,4 @@
-# fn6.js 2.4.0 Documentation
+# fn6.js 2.5.0 Documentation
 
 <a name="fn6"></a>
 
