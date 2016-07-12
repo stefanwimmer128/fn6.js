@@ -272,6 +272,10 @@ fn6.object2array = obj =>
 fn6.array2object = arr =>
     arr.reduce((obj, x) => (obj[x[0]] = x[1], obj), {});
 
+/**
+ * Extends fn6.js namespace, without overwriting built-ins
+ * @param obj {Object} Object to extend with
+ */
 fn6.extend = obj =>
     Object.keys(obj).forEach(key =>
         fn6[key] = fn6[key] === undefined ? obj[key] : fn6[key]
@@ -289,7 +293,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.4.0-rc.2",
+  "version": "2.4.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

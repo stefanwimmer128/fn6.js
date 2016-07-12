@@ -1,4 +1,4 @@
-# fn6.js 2.4.0-rc.2 Documentation
+# fn6.js 2.4.0 Documentation
 
 <a name="fn6"></a>
 
@@ -35,6 +35,7 @@ fn6.js Namespace
     * [.array(arr)](#fn6.array) ⇒ <code>[Array](#fn6.Array)</code>
     * [.object2array(obj)](#fn6.object2array) ⇒ <code>Array</code>
     * [.array2object(arr)](#fn6.array2object) ⇒ <code>Object</code>
+    * [.extend(obj)](#fn6.extend)
     * [.version()](#fn6.version) ⇒ <code>String</code>
 
 <a name="fn6.Array"></a>
@@ -341,6 +342,17 @@ Crates Object from Array
 | Param | Type | Description |
 | --- | --- | --- |
 | arr | <code>Array</code> | Array to convert |
+
+<a name="fn6.extend"></a>
+
+### fn6.extend(obj)
+Extends fn6.js namespace, without overwriting built-ins
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| obj | <code>Object</code> | Object to extend with |
 
 <a name="fn6.version"></a>
 
