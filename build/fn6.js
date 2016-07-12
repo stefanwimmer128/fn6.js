@@ -192,12 +192,6 @@ fn6.sum = arr =>
     arr.reduce((sum, x) => sum + x, 0);
 
 /**
- * function.js version
- * @return {String} function.js version
- */
-fn6.version = () => require("../package.json").version;
-
-/**
  * fn6.Array is an extended form of the global Array object
  * @extends Array
  */
@@ -278,12 +272,19 @@ fn6.object2array = (obj) =>
 fn6.array2object = (arr) =>
     arr.reduce((obj, x) => (obj[x[0]] = x[1], obj), {});
 
+/**
+ * function.js version
+ * @return {String} function.js version
+ */
+fn6.version = () =>
+    require("../package.json").version;
+
 module.exports = fn6;
 
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

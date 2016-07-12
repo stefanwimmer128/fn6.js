@@ -1,4 +1,4 @@
-# fn6.js 2.2.0 Documentation
+# fn6.js 2.3.0 Documentation
 
 <a name="fn6"></a>
 
@@ -32,10 +32,10 @@ fn6.js Namespace
     * [.every(fn)](#fn6.every) ⇒ <code>function</code>
     * [.some(fn)](#fn6.some) ⇒ <code>function</code>
     * [.sum(arr)](#fn6.sum) ⇒ <code>Number</code>
-    * [.version()](#fn6.version) ⇒ <code>String</code>
     * [.array(arr)](#fn6.array) ⇒ <code>[Array](#fn6.Array)</code>
     * [.object2array(obj)](#fn6.object2array) ⇒ <code>Array</code>
     * [.array2object(arr)](#fn6.array2object) ⇒ <code>Object</code>
+    * [.version()](#fn6.version) ⇒ <code>String</code>
 
 <a name="fn6.Array"></a>
 
@@ -302,13 +302,6 @@ Calculate sum of all numbers in the Array
 | --- | --- | --- |
 | arr | <code>Array</code> | Array to calculate sum of |
 
-<a name="fn6.version"></a>
-
-### fn6.version() ⇒ <code>String</code>
-function.js version
-
-**Kind**: static method of <code>[fn6](#fn6)</code>  
-**Returns**: <code>String</code> - function.js version  
 <a name="fn6.array"></a>
 
 ### fn6.array(arr) ⇒ <code>[Array](#fn6.Array)</code>
@@ -349,3 +342,10 @@ Crates Object from Array
 | --- | --- | --- |
 | arr | <code>Array</code> | Array to convert |
 
+<a name="fn6.version"></a>
+
+### fn6.version() ⇒ <code>String</code>
+function.js version
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>String</code> - function.js version  
