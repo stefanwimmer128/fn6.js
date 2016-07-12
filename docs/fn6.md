@@ -1,4 +1,4 @@
-# fn6.js 3.0.0-rc.2 Documentation
+# fn6.js 3.0.0-rc.3 Documentation
 
 <a name="fn6"></a>
 
@@ -15,11 +15,12 @@ fn6.js Namespace
         * [.peek()](#fn6.Array+peek) ⇒ <code>\*</code>
         * [.sum()](#fn6.Array+sum) ⇒ <code>Number</code>
         * [.toObject()](#fn6.Array+toObject) ⇒ <code>Object</code>
+    * [.version](#fn6.version) : <code>String</code>
     * [.curry(fn)](#fn6.curry) ⇒ <code>function</code>
     * [.uncurry(curried)](#fn6.uncurry) ⇒ <code>function</code>
     * [.bind(fn, [args], [thisArg])](#fn6.bind) ⇒ <code>function</code>
     * [.compose(...fn)](#fn6.compose) ⇒ <code>function</code>
-    * [.once(fn)](#fn6.once) ⇒ <code>function</code>
+    * [.once(fn)](#fn6.once) ⇒ <code>function</code> &#124; <code>undefined</code>
     * [.map(fn)](#fn6.map) ⇒ <code>function</code>
     * [.filter(fn)](#fn6.filter) ⇒ <code>function</code>
     * [.find(fn)](#fn6.find) ⇒ <code>function</code>
@@ -36,7 +37,6 @@ fn6.js Namespace
     * [.object2array(obj)](#fn6.object2array) ⇒ <code>Array</code>
     * [.array2object(arr)](#fn6.array2object) ⇒ <code>Object</code>
     * [.extend(obj)](#fn6.extend)
-    * [.version()](#fn6.version) ⇒ <code>String</code>
 
 <a name="fn6.Array"></a>
 
@@ -96,6 +96,12 @@ See fn6.array2object() using "this" as Array
 
 **Kind**: instance method of <code>[Array](#fn6.Array)</code>  
 **Returns**: <code>Object</code> - Return value from fn6.array2object()  
+<a name="fn6.version"></a>
+
+### fn6.version : <code>String</code>
+fn6.js version
+
+**Kind**: static property of <code>[fn6](#fn6)</code>  
 <a name="fn6.curry"></a>
 
 ### fn6.curry(fn) ⇒ <code>function</code>
@@ -148,11 +154,11 @@ Composes functions
 
 <a name="fn6.once"></a>
 
-### fn6.once(fn) ⇒ <code>function</code>
+### fn6.once(fn) ⇒ <code>function</code> &#124; <code>undefined</code>
 Returns function that can only be called once
 
 **Kind**: static method of <code>[fn6](#fn6)</code>  
-**Returns**: <code>function</code> - functions that can only be called once  
+**Returns**: <code>function</code> &#124; <code>undefined</code> - functions that can only be called once  
 
 | Param | Description |
 | --- | --- |
@@ -251,9 +257,9 @@ Combination of Array.prototype.pop and Array.prototype.push
 **Kind**: static method of <code>[fn6](#fn6)</code>  
 **Returns**: <code>\*</code> - Last element from array (like pop()) without removing (through push())  
 
-| Param | Description |
-| --- | --- |
-| arr | Array to be called on |
+| Param | Type | Description |
+| --- | --- | --- |
+| arr | <code>Array</code> | Array to be called on |
 
 <a name="fn6.each"></a>
 
@@ -354,10 +360,3 @@ Extends fn6.js namespace, without overwriting built-ins
 | --- | --- | --- |
 | obj | <code>Object</code> | Object to extend with |
 
-<a name="fn6.version"></a>
-
-### fn6.version() ⇒ <code>String</code>
-fn6.js version
-
-**Kind**: static method of <code>[fn6](#fn6)</code>  
-**Returns**: <code>String</code> - function.js version  

@@ -32,8 +32,7 @@ echo "/**
 while IFS="" read line
 do
     line="${line//\$\{version\}/${version}}"
+    line="${line//module.exports\ =\ /return\ }"
     echo "    ${line}" >> build/fn6.js
 done < src/fn6.js
-echo "    
-    return fn6;
-});" >> build/fn6.js
+echo "});" >> build/fn6.js

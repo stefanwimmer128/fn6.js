@@ -1,5 +1,5 @@
 /**
- * fn6.js 3.0.0-rc.2
+ * fn6.js 3.0.0-rc.3
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
 (fn6 =>
@@ -78,7 +78,7 @@
     /**
      * Returns function that can only be called once
      * @param fn Function to turn into a function that can only be called once
-     * @returns {function(...[*]): {}|undefined} functions that can only be called once
+     * @returns {function|undefined} functions that can only be called once
      */
     fn6.once = fn =>
     {
@@ -156,7 +156,7 @@
     
     /**
      * Combination of Array.prototype.pop and Array.prototype.push
-     * @param arr Array to be called on
+     * @param arr {Array} Array to be called on
      * @returns {*} Last element from array (like pop()) without removing (through push())
      */
     fn6.peek = arr =>
@@ -296,10 +296,9 @@
     
     /**
      * fn6.js version
-     * @return {String} function.js version
+     * @type {String}
      */
-    fn6.version = () =>
-        "3.0.0-rc.2";
+    fn6.version = "3.0.0-rc.3";
     
     return fn6;
 });
