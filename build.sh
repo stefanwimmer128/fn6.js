@@ -8,7 +8,7 @@ test -d docs && rm -dr docs
 mkdir docs
 
 # Write JSDoc
-echo "# fn6.js ${version} Documentation
+echo "# fn6.js ${version} JSDoc
 " > docs/fn6.md
 jsdoc2md src/fn6.js >> docs/fn6.md
 
