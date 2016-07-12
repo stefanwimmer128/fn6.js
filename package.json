@@ -1,6 +1,6 @@
 {
   "name": "fn6.js",
-  "version": "2.3.0",
+  "version": "2.4.0-rc.1",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {

@@ -14,7 +14,7 @@ const fn6 = {};
  * @param fn {function} Function to curry
  * @return {function} Curried function
  */
-fn6.curry = (fn) =>
+fn6.curry = fn =>
     fn6.bind(function curry(args, arg)
     {
         args = [ ...args, arg ];
@@ -30,7 +30,7 @@ fn6.curry = (fn) =>
  * @param curried {function} Curried function to uncurry
  * @return {function} Uncurried function
  */
-fn6.uncurry = (curried) =>
+fn6.uncurry = curried =>
     (...args) =>
     {
         let fn = curried;
@@ -69,7 +69,7 @@ fn6.compose = (...fn) =>
  * @param fn Function to turn into a function that can only be called once
  * @returns {function(...[*]): {}|undefined} functions that can only be called once
  */
-fn6.once = (fn) =>
+fn6.once = fn =>
 {
     let done = false;
     
@@ -149,7 +149,7 @@ fn6.pluck = (arr, key) =>
  * @param arr Array to be called on
  * @returns {*} Last element from array (like pop()) without removing (through push())
  */
-fn6.peek = (arr) =>
+fn6.peek = arr =>
 {
     const x = arr.pop();
     arr.push(x);
@@ -249,7 +249,7 @@ fn6.Array = class extends Array
  * @param arr {Array} Array to initialize with
  * @return {fn6.Array} Initialized fn6.Array
  */
-fn6.array = (arr) =>
+fn6.array = arr =>
     new fn6.Array(...arr);
 
 /**
@@ -259,7 +259,7 @@ fn6.array = (arr) =>
  * @param obj {Object} Object to convert
  * @return {Array} Converted Array
  */
-fn6.object2array = (obj) =>
+fn6.object2array = obj =>
     Object.keys(obj).map(key => [ key, obj[key] ]);
 
 /**
@@ -269,8 +269,13 @@ fn6.object2array = (obj) =>
  * @param arr {Array} Array to convert
  * @return {Object} Converted Object
  */
-fn6.array2object = (arr) =>
+fn6.array2object = arr =>
     arr.reduce((obj, x) => (obj[x[0]] = x[1], obj), {});
+
+fn6.extend = obj =>
+    Object.keys(obj).forEach(key =>
+        fn6[key] = fn6[key] === undefined ? obj[key] : fn6[key]
+    );
 
 /**
  * function.js version
@@ -284,7 +289,7 @@ module.exports = fn6;
 },{"../package.json":2}],2:[function(require,module,exports){
 module.exports={
   "name": "fn6.js",
-  "version": "2.3.0",
+  "version": "2.4.0-rc.1",
   "description": "Functional programming with ES6",
   "main": "lib/fn6.js",
   "scripts": {
