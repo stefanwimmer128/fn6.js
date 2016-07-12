@@ -278,7 +278,7 @@ fn6.extend = obj =>
     Object.keys(obj).forEach(key =>
         fn6[key] = fn6[key] === undefined ? obj[key] : ((() =>
         {
-            throw new Error("Key \"" + key + "\" already exists!");
+            throw new Error("Key '" + key + "' already exists!");
         })(), fn6[key])
     );
 
@@ -287,6 +287,4 @@ fn6.extend = obj =>
  * @return {String} function.js version
  */
 fn6.version = () =>
-    require("../package.json").version;
-
-module.exports = fn6;
+    "${version}";

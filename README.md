@@ -24,6 +24,6 @@ bower i -S fn6.js
 <script src="bower_components/fn6.js/build/fn6.js"></script>
 ```
 
-### Documentation
+### JSDoc
 
-The complete JSDoc can be found [here](https://github.com/stefanwimmer128/fn6.js/blob/master/docs/fn6.md).
+The JSDoc is located [here](https://github.com/stefanwimmer128/fn6.js/blob/master/docs/fn6.md).

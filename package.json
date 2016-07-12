@@ -1,8 +1,8 @@
 {
   "name": "fn6.js",
-  "version": "2.5.0",
+  "version": "3.0.0-rc.1",
   "description": "Functional programming with ES6",
-  "main": "lib/fn6.js",
+  "main": "build/fn6.js",
   "scripts": {
     "build": "./build.sh"
   },
@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/stefanwimmer128/fn6.js#readme",
   "devDependencies": {
-    "browserify": "^13.0.1",
     "jsdoc-to-markdown": "^1.3.6"
   }
 }
