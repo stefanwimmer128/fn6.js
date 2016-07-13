@@ -182,6 +182,18 @@ fn6.some = fn =>
         arr.some(fn);
 
 /**
+ * Checks if array contains value
+ * @param x {*} Value to check for
+ * @param [arr] {Array}
+ * @return {boolean|function} If called with array a boolean will be returned, if not a function to take the Array will be returned
+ */
+fn6.contains = (x, arr) =>
+{
+    const check = fn6.some(xx => xx === x);
+    return typeof arr === "undefined" ? check : check(arr);
+};
+
+/**
  * Calculate sum of all numbers in the Array
  * @param arr {Array} Array to calculate sum of
  * @return {Number} Calculated sum

@@ -1,5 +1,5 @@
 /**
- * fn6.js 3.0.0-rc.3
+ * fn6.js 3.0.0-rc.4
  * @author Stefan Wimmer <stefanwimmer128@gmail.com>
  */
 (fn6 =>
@@ -194,6 +194,18 @@
             arr.some(fn);
     
     /**
+     * Checks if array contains value
+     * @param x {*} Value to check for
+     * @param [arr] {Array}
+     * @return {boolean|function} If called with array a boolean will be returned, if not a function to take the Array will be returned
+     */
+    fn6.contains = (x, arr) =>
+    {
+        const check = fn6.some(xx => xx === x);
+        return typeof arr === "undefined" ? check : check(arr);
+    };
+    
+    /**
      * Calculate sum of all numbers in the Array
      * @param arr {Array} Array to calculate sum of
      * @return {Number} Calculated sum
@@ -298,7 +310,7 @@
      * fn6.js version
      * @type {String}
      */
-    fn6.version = "3.0.0-rc.3";
+    fn6.version = "3.0.0-rc.4";
     
     return fn6;
 });

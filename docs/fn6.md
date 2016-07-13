@@ -1,4 +1,4 @@
-# fn6.js 3.0.0-rc.3 Documentation
+# fn6.js 3.0.0-rc.4 JSDoc
 
 <a name="fn6"></a>
 
@@ -32,6 +32,7 @@ fn6.js Namespace
     * [.each(fn)](#fn6.each) ⇒ <code>function</code>
     * [.every(fn)](#fn6.every) ⇒ <code>function</code>
     * [.some(fn)](#fn6.some) ⇒ <code>function</code>
+    * [.contains(x, [arr])](#fn6.contains) ⇒ <code>boolean</code> &#124; <code>function</code>
     * [.sum(arr)](#fn6.sum) ⇒ <code>Number</code>
     * [.array(arr)](#fn6.array) ⇒ <code>[Array](#fn6.Array)</code>
     * [.object2array(obj)](#fn6.object2array) ⇒ <code>Array</code>
@@ -296,6 +297,19 @@ Curried Array.prototype.some function
 | Param | Type | Description |
 | --- | --- | --- |
 | fn | <code>function</code> | Callback function |
+
+<a name="fn6.contains"></a>
+
+### fn6.contains(x, [arr]) ⇒ <code>boolean</code> &#124; <code>function</code>
+Checks if array contains value
+
+**Kind**: static method of <code>[fn6](#fn6)</code>  
+**Returns**: <code>boolean</code> &#124; <code>function</code> - If called with array a boolean will be returned, if not a function to take the Array will be returned  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| x | <code>\*</code> | Value to check for |
+| [arr] | <code>Array</code> |  |
 
 <a name="fn6.sum"></a>
 
